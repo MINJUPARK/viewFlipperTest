@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button butPrev=(Button)findViewById(R.id.but_prev);
         Button butNext=(Button)findViewById(R.id.but_next);
-        ViewFlip =(ViewFlipper)findViewById(R.id.view_filp);
+        butPrev.setOnClickListener(this);
+        butNext.setOnClickListener(this);
+        viewFlip=(ViewFlipper)findViewById(R.id.view_filp);
         viewFlip.setOnTouchListener(this);
 
     }
